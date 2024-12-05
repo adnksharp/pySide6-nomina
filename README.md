@@ -1,6 +1,6 @@
 # Payroll calculator with pySide6
 
-![Captura-de-pantalla-20241205-011631.png](https://i.postimg.cc/zBF0V5ky/Captura-de-pantalla-20241205-011631.png)
+![Captura-de-pantalla-20241205-020927.png](https://i.postimg.cc/NF4NKYBN/Captura-de-pantalla-20241205-020927.png)
 
 Calculadora de nomina usando python pySide6
 
