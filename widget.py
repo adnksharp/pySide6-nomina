@@ -94,6 +94,17 @@ class Widget(QWidget):
         if hours[2] > 0:
             money += sum(hours) * self.payment * self.hparams[2] / 100
             
+        # deductions
+        for i in range(len(self.isrparams[0])):
+            if money <= self.isrparams[0][i]:
+                isr = self.isrparams[1][i]
+                break
+            if i == (len(self.isrparams[0]) - 1):
+                isr = self.isrparams[1][i + 1]
+        hs = money * self.mparams[0] / 100
+        wu = self.mparams[1]
+        md = self.mparams[2]
+            
     def updateHparams(self):
         for k in range(len(self.hparams)):
             try:
@@ -110,10 +121,16 @@ class Widget(QWidget):
     def updateDparams(self):
         for i in range(len(self.isrparams)):
             for j in range(len(self.isrparams[i])):
-                self. isrparams[i][j] = self.siriu[i][j].text()
+                try:
+                    self. isrparams[i][j] = float(self.siriu[i][j].text())
+                except:
+                    pass
                 
         for i in range(len(self.medit) - 7):
-            self.mparams[i] = self.medit[7 + i].text()
+            try:
+                self.mparams[i] = float(self.medit[7 + i].text())
+            except:
+                pass
         
         #mainf
     
