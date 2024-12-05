@@ -109,8 +109,7 @@ class Widget(QWidget):
         hs = money * self.mparams[0] / 100
         wu = self.mparams[1]
         md = self.mparams[2]
-        
-        self.ui.hTotal.setText(str(round(sum(hours[:3],2))))
+        self.ui.hTotal.setText(str(round(sum(hours[:3]),2)))
         self.ui.hExtra.setText(str(round((hours[1] + hours[2]),2)))
         self.ui.dISR.setText('$ ' + str(round(isr,2)))
         self.ui.dIMSS.setText('$ ' + str(round(hs,2)))
