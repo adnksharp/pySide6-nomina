@@ -1,4 +1,6 @@
 import sys
+from notifypy import Notify as noty
+import pyperclip as xclip
 
 from PySide6.QtWidgets import QApplication, QWidget
 
@@ -13,6 +15,9 @@ class Widget(QWidget):
         
         self.ui = Ui_Widget()
         self.ui.setupUi(self)
+        self.noty = noty()
+        self.noty.title = 'Nomina'
+        self.noty.message = 'Datos copiados al portapapeles'
         
         self.hparams = [40.0, 15.0, 15.0] # base, double hours and bonus
         self.hedit = [
@@ -101,9 +106,29 @@ class Widget(QWidget):
                 break
             if i == (len(self.isrparams[0]) - 1):
                 isr = self.isrparams[1][i + 1]
+        isr *= money / 100
         hs = money * self.mparams[0] / 100
         wu = self.mparams[1]
         md = self.mparams[2]
+        
+        self.ui.hTotal.setText(str(round(sum(hours[:3],2))))
+        self.ui.hExtra.setText(str(round((hours[1] + hours[2]),2)))
+        self.ui.dISR.setText('$ ' + str(round(isr,2)))
+        self.ui.dIMSS.setText('$ ' + str(round(hs,2)))
+        self.ui.dMore.setText('$ ' + str(round((md + wu),2)))
+        self.ui.sTotal.setText('$ ' + str(round(money,2)))
+        self.ui.aDeductions.setText('$ ' + str(round((isr + hs + wu + md),2)))
+        self.ui.final_2.setText('$ ' + str(round((money - (isr + hs + wu + md)),2)))
+        
+        self.pout = f"""Horas totales    : {str(round(sum(hours[:3],2)))}
+Horas extra      : {str(round((hours[1] + hours[2]),2))}
+ISR              : $ {str(round(isr,2))}
+Seguro           : $ {str(round(hs,2))}
+Otras deducciones: $ {str(round((md + wu),2))}
+Subtotal         : $ {str(round(money,2))}
+Deducciones      : $ {str(round((isr + hs + wu + md),2))}
+
+Total            : $ {str(round((money - (isr + hs + wu + md)),2))}"""
             
     def updateHparams(self):
         for k in range(len(self.hparams)):
@@ -132,7 +157,7 @@ class Widget(QWidget):
             except:
                 pass
         
-        #mainf
+        self.getPayroll()
     
     def newHours(self):
         try:
@@ -161,20 +186,13 @@ class Widget(QWidget):
             i.setStyleSheet('color:#fff;' if self.lock[1] else 'color:#888;')
         
     def copyToClipboard(self):
-        out = f"""Horas totales    : {self.ui.hTotal.value()}
-Horas extra      : {self.ui.hExtra.value()}
-ISR              : {self.ui.dISR.value()}
-Seguro           : {self.ui.dIMSS.value()}
-Otras deducciones: {self.ui.dMore.value()}
-Subtotal         : {self.ui.sTotal.value()}
-Deducciones      : {self.ui.aDeductions.value()}
-
-Total            : {self.ui.final_2.value()}"""
+        out = self.pout
         #pyperclipf
         #notifypy
         
     def saveAs(self):
-        out = ''
+        xclip.copy(self.pout)
+        self.noty.send()
         #QFiledialog or exec
 
 if __name__ == "__main__":

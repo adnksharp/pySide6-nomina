@@ -15,15 +15,15 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLCDNumber,
-    QLabel, QLayout, QLineEdit, QPushButton,
-    QSizePolicy, QSpacerItem, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
+    QLayout, QLineEdit, QPushButton, QSizePolicy,
+    QSpacerItem, QVBoxLayout, QWidget)
 
 class Ui_Widget(object):
     def setupUi(self, Widget):
         if not Widget.objectName():
             Widget.setObjectName(u"Widget")
-        Widget.resize(565, 603)
+        Widget.resize(601, 603)
         self.verticalLayout_11 = QVBoxLayout(Widget)
         self.verticalLayout_11.setObjectName(u"verticalLayout_11")
         self.horizontalLayout_1 = QHBoxLayout()
@@ -478,13 +478,10 @@ class Ui_Widget(object):
 
         self.horizontalLayout_21.addWidget(self.label_27)
 
-        self.hTotal = QLCDNumber(Widget)
+        self.hTotal = QLabel(Widget)
         self.hTotal.setObjectName(u"hTotal")
-        sizePolicy4.setHeightForWidth(self.hTotal.sizePolicy().hasHeightForWidth())
-        self.hTotal.setSizePolicy(sizePolicy4)
-        self.hTotal.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.hTotal.setFrameShape(QFrame.Shape.NoFrame)
-        self.hTotal.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+        self.hTotal.setStyleSheet(u"font: 10pt \"JetBrainsMono Nerd Font\";")
+        self.hTotal.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
 
         self.horizontalLayout_21.addWidget(self.hTotal)
 
@@ -499,13 +496,10 @@ class Ui_Widget(object):
 
         self.horizontalLayout_22.addWidget(self.label_28)
 
-        self.hExtra = QLCDNumber(Widget)
+        self.hExtra = QLabel(Widget)
         self.hExtra.setObjectName(u"hExtra")
-        sizePolicy4.setHeightForWidth(self.hExtra.sizePolicy().hasHeightForWidth())
-        self.hExtra.setSizePolicy(sizePolicy4)
-        self.hExtra.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.hExtra.setFrameShape(QFrame.Shape.NoFrame)
-        self.hExtra.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+        self.hExtra.setStyleSheet(u"font: 10pt \"JetBrainsMono Nerd Font\";")
+        self.hExtra.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
 
         self.horizontalLayout_22.addWidget(self.hExtra)
 
@@ -537,13 +531,10 @@ class Ui_Widget(object):
 
         self.horizontalLayout_23.addWidget(self.label_30)
 
-        self.dISR = QLCDNumber(Widget)
+        self.dISR = QLabel(Widget)
         self.dISR.setObjectName(u"dISR")
-        sizePolicy4.setHeightForWidth(self.dISR.sizePolicy().hasHeightForWidth())
-        self.dISR.setSizePolicy(sizePolicy4)
-        self.dISR.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.dISR.setFrameShape(QFrame.Shape.NoFrame)
-        self.dISR.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+        self.dISR.setStyleSheet(u"font: 10pt \"JetBrainsMono Nerd Font\";")
+        self.dISR.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
 
         self.horizontalLayout_23.addWidget(self.dISR)
 
@@ -558,13 +549,10 @@ class Ui_Widget(object):
 
         self.horizontalLayout_24.addWidget(self.label_31)
 
-        self.dIMSS = QLCDNumber(Widget)
+        self.dIMSS = QLabel(Widget)
         self.dIMSS.setObjectName(u"dIMSS")
-        sizePolicy4.setHeightForWidth(self.dIMSS.sizePolicy().hasHeightForWidth())
-        self.dIMSS.setSizePolicy(sizePolicy4)
-        self.dIMSS.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.dIMSS.setFrameShape(QFrame.Shape.NoFrame)
-        self.dIMSS.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+        self.dIMSS.setStyleSheet(u"font: 10pt \"JetBrainsMono Nerd Font\";")
+        self.dIMSS.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
 
         self.horizontalLayout_24.addWidget(self.dIMSS)
 
@@ -579,13 +567,10 @@ class Ui_Widget(object):
 
         self.horizontalLayout_26.addWidget(self.label_33)
 
-        self.dMore = QLCDNumber(Widget)
+        self.dMore = QLabel(Widget)
         self.dMore.setObjectName(u"dMore")
-        sizePolicy4.setHeightForWidth(self.dMore.sizePolicy().hasHeightForWidth())
-        self.dMore.setSizePolicy(sizePolicy4)
-        self.dMore.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.dMore.setFrameShape(QFrame.Shape.NoFrame)
-        self.dMore.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+        self.dMore.setStyleSheet(u"font: 10pt \"JetBrainsMono Nerd Font\";")
+        self.dMore.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
 
         self.horizontalLayout_26.addWidget(self.dMore)
 
@@ -617,13 +602,10 @@ class Ui_Widget(object):
 
         self.horizontalLayout_27.addWidget(self.label_35)
 
-        self.sTotal = QLCDNumber(Widget)
+        self.sTotal = QLabel(Widget)
         self.sTotal.setObjectName(u"sTotal")
-        sizePolicy4.setHeightForWidth(self.sTotal.sizePolicy().hasHeightForWidth())
-        self.sTotal.setSizePolicy(sizePolicy4)
-        self.sTotal.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.sTotal.setFrameShape(QFrame.Shape.NoFrame)
-        self.sTotal.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+        self.sTotal.setStyleSheet(u"font: 10pt \"JetBrainsMono Nerd Font\";")
+        self.sTotal.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
 
         self.horizontalLayout_27.addWidget(self.sTotal)
 
@@ -638,13 +620,10 @@ class Ui_Widget(object):
 
         self.horizontalLayout_28.addWidget(self.label_36)
 
-        self.aDeductions = QLCDNumber(Widget)
+        self.aDeductions = QLabel(Widget)
         self.aDeductions.setObjectName(u"aDeductions")
-        sizePolicy4.setHeightForWidth(self.aDeductions.sizePolicy().hasHeightForWidth())
-        self.aDeductions.setSizePolicy(sizePolicy4)
-        self.aDeductions.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.aDeductions.setFrameShape(QFrame.Shape.NoFrame)
-        self.aDeductions.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+        self.aDeductions.setStyleSheet(u"font: 10pt \"JetBrainsMono Nerd Font\";")
+        self.aDeductions.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
 
         self.horizontalLayout_28.addWidget(self.aDeductions)
 
@@ -659,13 +638,10 @@ class Ui_Widget(object):
 
         self.horizontalLayout_29.addWidget(self.label_37)
 
-        self.final_2 = QLCDNumber(Widget)
+        self.final_2 = QLabel(Widget)
         self.final_2.setObjectName(u"final_2")
-        sizePolicy4.setHeightForWidth(self.final_2.sizePolicy().hasHeightForWidth())
-        self.final_2.setSizePolicy(sizePolicy4)
-        self.final_2.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.final_2.setFrameShape(QFrame.Shape.NoFrame)
-        self.final_2.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+        self.final_2.setStyleSheet(u"font: 10pt \"JetBrainsMono Nerd Font\";")
+        self.final_2.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
 
         self.horizontalLayout_29.addWidget(self.final_2)
 
@@ -755,15 +731,23 @@ class Ui_Widget(object):
         self.dEdit.setText(QCoreApplication.translate("Widget", u"Modificar", None))
         self.label_26.setText(QCoreApplication.translate("Widget", u"Horas trabajadas", None))
         self.label_27.setText(QCoreApplication.translate("Widget", u"Horas totales:", None))
+        self.hTotal.setText(QCoreApplication.translate("Widget", u"0.00", None))
         self.label_28.setText(QCoreApplication.translate("Widget", u"Horas extra:", None))
+        self.hExtra.setText(QCoreApplication.translate("Widget", u"0.00", None))
         self.label_29.setText(QCoreApplication.translate("Widget", u"Deducciones", None))
         self.label_30.setText(QCoreApplication.translate("Widget", u"ISR:", None))
+        self.dISR.setText(QCoreApplication.translate("Widget", u"$ 0.00", None))
         self.label_31.setText(QCoreApplication.translate("Widget", u"Seguro:", None))
+        self.dIMSS.setText(QCoreApplication.translate("Widget", u"$ 0.00", None))
         self.label_33.setText(QCoreApplication.translate("Widget", u"Otros:", None))
+        self.dMore.setText(QCoreApplication.translate("Widget", u"$ 0.00", None))
         self.label_34.setText(QCoreApplication.translate("Widget", u"Pago", None))
         self.label_35.setText(QCoreApplication.translate("Widget", u"Subtotal:", None))
+        self.sTotal.setText(QCoreApplication.translate("Widget", u"$ 0.00", None))
         self.label_36.setText(QCoreApplication.translate("Widget", u"Deducciones:", None))
+        self.aDeductions.setText(QCoreApplication.translate("Widget", u"$ 0.00", None))
         self.label_37.setText(QCoreApplication.translate("Widget", u"Total:", None))
+        self.final_2.setText(QCoreApplication.translate("Widget", u"$ 0.00", None))
         self.pushButton_2.setText(QCoreApplication.translate("Widget", u"Copiar", None))
         self.pushButton_4.setText(QCoreApplication.translate("Widget", u"Guardar", None))
     # retranslateUi

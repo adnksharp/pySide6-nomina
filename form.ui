@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>565</width>
+    <width>601</width>
     <height>603</height>
    </rect>
   </property>
@@ -826,21 +826,15 @@ background:black</string>
               </widget>
              </item>
              <item>
-              <widget class="QLCDNumber" name="hTotal">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
+              <widget class="QLabel" name="hTotal">
+               <property name="styleSheet">
+                <string notr="true">font: 10pt &quot;JetBrainsMono Nerd Font&quot;;</string>
                </property>
-               <property name="cursor">
-                <cursorShape>PointingHandCursor</cursorShape>
+               <property name="text">
+                <string>0.00</string>
                </property>
-               <property name="frameShape">
-                <enum>QFrame::Shape::NoFrame</enum>
-               </property>
-               <property name="segmentStyle">
-                <enum>QLCDNumber::SegmentStyle::Flat</enum>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                </property>
               </widget>
              </item>
@@ -859,21 +853,15 @@ background:black</string>
               </widget>
              </item>
              <item>
-              <widget class="QLCDNumber" name="hExtra">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
+              <widget class="QLabel" name="hExtra">
+               <property name="styleSheet">
+                <string notr="true">font: 10pt &quot;JetBrainsMono Nerd Font&quot;;</string>
                </property>
-               <property name="cursor">
-                <cursorShape>PointingHandCursor</cursorShape>
+               <property name="text">
+                <string>0.00</string>
                </property>
-               <property name="frameShape">
-                <enum>QFrame::Shape::NoFrame</enum>
-               </property>
-               <property name="segmentStyle">
-                <enum>QLCDNumber::SegmentStyle::Flat</enum>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                </property>
               </widget>
              </item>
@@ -910,21 +898,15 @@ background:black</string>
               </widget>
              </item>
              <item>
-              <widget class="QLCDNumber" name="dISR">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
+              <widget class="QLabel" name="dISR">
+               <property name="styleSheet">
+                <string notr="true">font: 10pt &quot;JetBrainsMono Nerd Font&quot;;</string>
                </property>
-               <property name="cursor">
-                <cursorShape>PointingHandCursor</cursorShape>
+               <property name="text">
+                <string>$ 0.00</string>
                </property>
-               <property name="frameShape">
-                <enum>QFrame::Shape::NoFrame</enum>
-               </property>
-               <property name="segmentStyle">
-                <enum>QLCDNumber::SegmentStyle::Flat</enum>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                </property>
               </widget>
              </item>
@@ -943,21 +925,15 @@ background:black</string>
               </widget>
              </item>
              <item>
-              <widget class="QLCDNumber" name="dIMSS">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
+              <widget class="QLabel" name="dIMSS">
+               <property name="styleSheet">
+                <string notr="true">font: 10pt &quot;JetBrainsMono Nerd Font&quot;;</string>
                </property>
-               <property name="cursor">
-                <cursorShape>PointingHandCursor</cursorShape>
+               <property name="text">
+                <string>$ 0.00</string>
                </property>
-               <property name="frameShape">
-                <enum>QFrame::Shape::NoFrame</enum>
-               </property>
-               <property name="segmentStyle">
-                <enum>QLCDNumber::SegmentStyle::Flat</enum>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                </property>
               </widget>
              </item>
@@ -976,21 +952,15 @@ background:black</string>
               </widget>
              </item>
              <item>
-              <widget class="QLCDNumber" name="dMore">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
+              <widget class="QLabel" name="dMore">
+               <property name="styleSheet">
+                <string notr="true">font: 10pt &quot;JetBrainsMono Nerd Font&quot;;</string>
                </property>
-               <property name="cursor">
-                <cursorShape>PointingHandCursor</cursorShape>
+               <property name="text">
+                <string>$ 0.00</string>
                </property>
-               <property name="frameShape">
-                <enum>QFrame::Shape::NoFrame</enum>
-               </property>
-               <property name="segmentStyle">
-                <enum>QLCDNumber::SegmentStyle::Flat</enum>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                </property>
               </widget>
              </item>
@@ -1027,21 +997,15 @@ background:black</string>
               </widget>
              </item>
              <item>
-              <widget class="QLCDNumber" name="sTotal">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
+              <widget class="QLabel" name="sTotal">
+               <property name="styleSheet">
+                <string notr="true">font: 10pt &quot;JetBrainsMono Nerd Font&quot;;</string>
                </property>
-               <property name="cursor">
-                <cursorShape>PointingHandCursor</cursorShape>
+               <property name="text">
+                <string>$ 0.00</string>
                </property>
-               <property name="frameShape">
-                <enum>QFrame::Shape::NoFrame</enum>
-               </property>
-               <property name="segmentStyle">
-                <enum>QLCDNumber::SegmentStyle::Flat</enum>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                </property>
               </widget>
              </item>
@@ -1060,21 +1024,15 @@ background:black</string>
               </widget>
              </item>
              <item>
-              <widget class="QLCDNumber" name="aDeductions">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
+              <widget class="QLabel" name="aDeductions">
+               <property name="styleSheet">
+                <string notr="true">font: 10pt &quot;JetBrainsMono Nerd Font&quot;;</string>
                </property>
-               <property name="cursor">
-                <cursorShape>PointingHandCursor</cursorShape>
+               <property name="text">
+                <string>$ 0.00</string>
                </property>
-               <property name="frameShape">
-                <enum>QFrame::Shape::NoFrame</enum>
-               </property>
-               <property name="segmentStyle">
-                <enum>QLCDNumber::SegmentStyle::Flat</enum>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                </property>
               </widget>
              </item>
@@ -1093,21 +1051,15 @@ background:black</string>
               </widget>
              </item>
              <item>
-              <widget class="QLCDNumber" name="final_2">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
+              <widget class="QLabel" name="final_2">
+               <property name="styleSheet">
+                <string notr="true">font: 10pt &quot;JetBrainsMono Nerd Font&quot;;</string>
                </property>
-               <property name="cursor">
-                <cursorShape>PointingHandCursor</cursorShape>
+               <property name="text">
+                <string>$ 0.00</string>
                </property>
-               <property name="frameShape">
-                <enum>QFrame::Shape::NoFrame</enum>
-               </property>
-               <property name="segmentStyle">
-                <enum>QLCDNumber::SegmentStyle::Flat</enum>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                </property>
               </widget>
              </item>
