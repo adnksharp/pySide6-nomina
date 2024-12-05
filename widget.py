@@ -64,12 +64,36 @@ class Widget(QWidget):
         for m in range(len(self.medit)):
             self.medit[m].textChanged.connect(self.updateDparams)
         
+    def getPayroll(self):
+        hours = []
+        try:
+            _h = float(self.ui.hours.text())
+        except:
+            _h = 0
+        
+        if _h < 0:
+            return    
+        
+        for i in range(len(self.hparams) - 1):
+            if _h >= self.hparams[i]:
+                hours.append(self.hparams[i])
+                _h -= self.hparams[i]
+            else:
+                hours.append(_h)
+                _h= 0
+                break
+        if _h > 0:
+            hours.append(_h)
+        for _ in range(3 - len(hours)):
+            hours.append(0.0)
+                
+                
+        
     def updateHparams(self):
         for k in range(len(self.hparams)):
             try:
                 self.hparams[k] = float(self.hedit[k].text())
             except:
-                #print(self.hedit[i].text())
                 return
         
         self.hlabel[0].setText(f'Base (0 a {str(self.hparams[0])})')
@@ -93,7 +117,7 @@ class Widget(QWidget):
             self.hours = float(self.ui.hours.text())
         except:
             return
-        #mainf
+        self.getPayroll()
         
     def newPays(self):
         try:
