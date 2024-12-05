@@ -65,6 +65,7 @@ class Widget(QWidget):
             self.medit[m].textChanged.connect(self.updateDparams)
         
     def getPayroll(self):
+        # hours worked
         hours = []
         try:
             _h = float(self.ui.hours.text())
@@ -87,8 +88,12 @@ class Widget(QWidget):
         for _ in range(3 - len(hours)):
             hours.append(0.0)
                 
-                
-        
+        # subtotal
+        money = [ (hours[i] * (i+1) * self.payment) for i in range(len(hours))]
+        money = sum(money)
+        if hours[2] > 0:
+            money += sum(hours) * self.payment * self.hparams[2] / 100
+            
     def updateHparams(self):
         for k in range(len(self.hparams)):
             try:
@@ -100,7 +105,7 @@ class Widget(QWidget):
         self.hlabel[1].setText(f'Dobles ({str(self.hparams[0] + 0.01)} a {str(self.hparams[0] + self.hparams[1])})')
         self.hlabel[2].setText(f'Triples (>{str(self.hparams[0] + self.hparams[1])})\n+{str(self.hparams[2])})% de bonus')
     
-        #mainf
+        self.getPayroll()
     
     def updateDparams(self):
         for i in range(len(self.isrparams)):
@@ -124,7 +129,7 @@ class Widget(QWidget):
             self.payment = float(self.ui.payment.text())
         except:
             return
-        #mainf
+        self.getPayroll()
         
     def changeHours(self):
         self.lock[0] = not self.lock[0]
