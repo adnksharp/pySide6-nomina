@@ -2,7 +2,7 @@ import sys
 from notifypy import Notify as noty
 import pyperclip as xclip
 
-from PySide6.QtWidgets import QApplication, QWidget
+from PySide6.QtWidgets import QApplication, QWidget, QFileDialog
 
 from ui_form import Ui_Widget
 
@@ -17,7 +17,6 @@ class Widget(QWidget):
         self.ui.setupUi(self)
         self.noty = noty()
         self.noty.title = 'Nomina'
-        self.noty.message = 'Datos copiados al portapapeles'
         
         self.hparams = [40.0, 15.0, 15.0] # base, double hours and bonus
         self.hedit = [
@@ -61,7 +60,7 @@ class Widget(QWidget):
         self.ui.hEdit.clicked.connect(self.changeHours)
         self.ui.dEdit.clicked.connect(self.changeDeductions)
         self.ui.pushButton_2.clicked.connect(self.copyToClipboard)
-        self.ui.pushButton_2.clicked.connect(self.saveAs)
+        self.ui.pushButton_4.clicked.connect(self.saveAs)
         
         for n in range(len(self.hedit)):
             self.hedit[n].textChanged.connect(self.updateHparams)
@@ -186,13 +185,28 @@ Total            : $ {str(round((money - (isr + hs + wu + md)),2))}"""
             i.setStyleSheet('color:#fff;' if self.lock[1] else 'color:#888;')
         
     def copyToClipboard(self):
-        out = self.pout
-        #pyperclipf
-        #notifypy
+        try:
+            xclip.copy(self.pout)
+            self.noty.message = 'Datos copiados al portapapeles'
+            self.noty.send()
+        except: 
+            pass
         
     def saveAs(self):
-        xclip.copy(self.pout)
+        try:
+            fileName, _ =  QFileDialog.getSaveFileName(self, 
+                "Guardar datos de nomina", "", "Text Files(*.txt)")
+            if fileName:
+                if not '.txt' in fileName:
+                    fileName += '.txt'
+                with open(fileName, 'w') as f:
+                    f.write(self.pout)
+            self.noty.message = f'Archivo {fileName.split("/")[-1]} guardado'
+        except:
+            self.noty.message = 'No se pugo guardar el archivo'
         self.noty.send()
+            #self.fileName = fileName
+            #self.setWindowTitle(str(os.path.basename(fileName)) + " - Notepad Alpha[*]")
         #QFiledialog or exec
 
 if __name__ == "__main__":
